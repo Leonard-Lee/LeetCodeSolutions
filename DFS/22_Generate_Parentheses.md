@@ -72,3 +72,41 @@ class Solution(object):
                 self.helper(n, numLeft, numRight+1, str+")", res)
 
 ```
+
+---------------------------------------------------------------------------
+# [Solution II]
+
+
+### Thoughts
+簡化上述的判斷式
+
+
+### Complexity
+- Time:
+- Space:
+
+
+### Ref Links
+-
+
+### Source Code
+```python
+def generateParenthesis(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        res = []
+        self.helper(n, 0, 0, "", res)
+        return res
+
+    def helper(self, n, numLeft, numRight, str, res):
+        if len(str) == n * 2:
+            res.append(str)
+            return
+        if numLeft < n:
+            self.helper(n, numLeft+1, numRight, str+"(", res)
+        if numRight < numLeft:
+            self.helper(n, numLeft, numRight+1, str+")", res)
+
+```
