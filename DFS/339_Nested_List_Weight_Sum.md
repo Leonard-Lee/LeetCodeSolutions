@@ -1,6 +1,3 @@
-### Owner
-- Luckman
-
 ### Question Title
 - [339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)
 
@@ -63,6 +60,7 @@ Using Recursion
 
 ### Thoughts
 Using Iteration + Stack
+
 Also use tuple to combine Depth with NestedInteger
 
 ### Complexity
@@ -97,6 +95,7 @@ def depthSum(self, nestedList):
 
 ### Thoughts
 Using Iteration + Queue
+
 這裡作法蠻巧妙的，在while dq:，
 不是只有一次pop，而是有多次pop，同一層有幾個就pop幾個，
 所以當離開 while dq:中的for loop時，就到了下一層了
